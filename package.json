@@ -21,6 +21,6 @@
     "@11ty/eleventy": "^1.0.1",
     "govuk-frontend": "^4.1.0",
     "nunjucks": "^3.2.3",
-    "sass": "^1.52.2"
+    "sass": "^1.52.3"
   }
 }
