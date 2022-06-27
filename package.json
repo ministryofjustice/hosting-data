@@ -19,7 +19,7 @@
   "homepage": "https://github.com/ministryofjustice/hosting-data#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
-    "govuk-frontend": "^4.1.0",
+    "govuk-frontend": "^4.2.0",
     "nunjucks": "^3.2.3",
     "sass": "^1.53.0"
   }
