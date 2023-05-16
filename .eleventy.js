@@ -2,7 +2,13 @@ const govukEleventyPlugin = require('@x-govuk/govuk-eleventy-plugin')
 
 module.exports = function (eleventyConfig) {
   // Plugins
-  eleventyConfig.addPlugin(govukEleventyPlugin)
+  eleventyConfig.addPlugin(govukEleventyPlugin, {
+    header: {
+      organisationLogo: false,
+      organisationName: 'Ministry of Justice',
+      productName: 'Hosting data'
+    }
+  })
 
   return {
     dataTemplateEngine: 'njk',
