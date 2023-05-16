@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hosting-data-ingress
+  namespace: hosting-data-production
+  annotations:
+    external-dns.alpha.kubernetes.io/set-identifier: hosting-data-ingress-hosting-data-production-green
+    external-dns.alpha.kubernetes.io/aws-weight: "100"
+spec:
+  ingressClassName: default
+  tls:
+    - hosts:
+        - hosting-data.apps.live.cloud-platform.service.justice.gov.uk
+  rules:
+    - host: hosting-data.apps.live.cloud-platform.service.justice.gov.uk
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: hosting-data-service
+                port:
+                  number: 8080
