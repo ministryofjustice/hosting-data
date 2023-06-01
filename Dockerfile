@@ -16,7 +16,7 @@ COPY . .
 RUN npx @11ty/eleventy
 
 # create nginx proxy to serve static files
-FROM nginxinc/nginx-unprivileged:1.24-alpine3.17
+FROM nginxinc/nginx-unprivileged:1.25-alpine3.17
 
 # set workdir to nginx root
 WORKDIR /usr/share/nginx/html
